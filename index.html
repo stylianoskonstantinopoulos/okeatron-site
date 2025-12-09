@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OKEATRON</title>
 
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="okeatron_favicon.ico">
 
     <style>
@@ -13,36 +12,31 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            width: 100%;
         }
 
         body {
+            min-height: 100vh;
             background-color: #001322;
-            margin: 0;
-            padding: 0;
+            background-image: url("okeatron-bg.png");
+            background-repeat: no-repeat;
+            background-position: center bottom; /* κρατάει λογότυπο πιο χαμηλά, καλό για κινητό */
+            background-size: cover;            /* γεμίζει την οθόνη */
         }
 
-        .wrapper {
-            width: 100vw;
-            height: 100vh;
+        /* Προαιρετικό container αν θες αργότερα κείμενο / κουμπί */
+        .content {
+            width: 100%;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden; /* προστασία από scroll */
-        }
-
-        .wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* γεμίζει την οθόνη όπως σε background-size: cover */
-            display: block;
         }
     </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <img src="okeatron-bg.png" alt="OKEATRON">
+    <div class="content">
+        <!-- άφησέ το κενό προς το παρόν, είναι μόνο για μελλοντικό κείμενο -->
     </div>
 </body>
 </html>
