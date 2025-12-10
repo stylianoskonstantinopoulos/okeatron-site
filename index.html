@@ -7,31 +7,48 @@
 
     <link rel="icon" type="image/x-icon" href="okeatron_favicon.ico">
 
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
 
+    body {
+        width: 100%;
+        height: 100%;
+        background-color: #000e1a;
+
+        /* Background image settings */
+        background-image: url("okeatron-bg.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain; /* keeps perfect proportions */
+        background-attachment: fixed; /* keeps image stable on scroll */
+
+        /* For mobile devices where background-attachment: fixed is buggy */
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+    }
+
+    /* Optional center container if later needed */
+    .content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Fix for iOS Safari viewport resize issues */
+    @supports (-webkit-touch-callout: none) {
         body {
-            min-height: 100vh;
-            background-color: #001322;
-            background-image: url("okeatron-bg.png");
-            background-repeat: no-repeat;
-            background-position: center bottom; /* κρατάει λογότυπο πιο χαμηλά, καλό για κινητό */
-            background-size: cover;            /* γεμίζει την οθόνη */
+            background-attachment: scroll;
         }
+    }
+</style>
 
-        /* Προαιρετικό container αν θες αργότερα κείμενο / κουμπί */
-        .content {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
 </head>
 
 <body>
